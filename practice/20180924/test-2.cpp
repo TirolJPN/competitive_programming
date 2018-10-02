@@ -13,7 +13,7 @@ int main(){
     // string:文字列型
     string str;
 
-    
+    // pair:二つの値の組
 
     mp['a'] = 1;
     mp['b'] = 2;
