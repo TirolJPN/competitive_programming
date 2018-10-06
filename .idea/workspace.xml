@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdf28cf9-ac8e-40a9-83ee-75831cf6d66e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/practice/abs/ABC088B.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/abs/ABC085B.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,32 +23,33 @@
     <session id="-2063843384">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="18" />
+          <entry key="cpp" value="19" />
           <entry key="gitignore" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="18" />
+          <entry key="ObjectiveC" value="19" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2553" />
+          <entry key="cpp" value="2928" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="2553" />
+          <entry key="ObjectiveC" value="2928" />
         </counts>
       </usages-collector>
     </session>
@@ -56,19 +57,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/practice/abs/ABC083B.cpp">
+        <entry file="file://$PROJECT_DIR$/practice/abs/ABC088B.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/practice/abs/ABC088B.cpp">
+        <entry file="file://$PROJECT_DIR$/practice/abs/ABC085B.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -89,6 +90,7 @@
         <option value="$PROJECT_DIR$/practice/abs/ABC087B.cpp" />
         <option value="$PROJECT_DIR$/practice/abs/ABC083B.cpp" />
         <option value="$PROJECT_DIR$/practice/abs/ABC088B.cpp" />
+        <option value="$PROJECT_DIR$/practice/abs/ABC085B.cpp" />
       </list>
     </option>
   </component>
@@ -111,6 +113,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,7 +153,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,18 +182,19 @@
       <option name="presentableId" value="Default" />
       <updated>1538469723578</updated>
       <workItem from="1538469727030" duration="2221000" />
-      <workItem from="1538804948462" duration="5639000" />
+      <workItem from="1538804948462" duration="6246000" />
+      <workItem from="1538814232992" duration="390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7860000" />
+    <option name="totallyTimeSpent" value="8857000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="807" y="0" width="633" height="900" extended-state="6" />
+    <frame x="632" y="0" width="808" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20981388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38772845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -293,8 +296,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/abs/ABC088B.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/abs/ABC085B.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
         </state>
       </provider>
     </entry>
