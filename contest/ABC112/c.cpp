@@ -63,7 +63,7 @@ int main(){
                 if (H[k] != VV) flag = false;
             }
             if(flag == true)
-            vec.push_back(make_tuple(i, j, V));
+                vec.push_back(make_tuple(i, j, V));
         }
     }
     if(vec.size() == 1){
