@@ -44,6 +44,7 @@ int main(){
             }
         }
         if(tmpf && c3>0 && c5 > 0 && c7>0){
+            cout << i << endl;
             ans++;
         }
         if(((i/10) / (i / (i/10))) < 3){
