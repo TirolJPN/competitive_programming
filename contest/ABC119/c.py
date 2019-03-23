@@ -9,6 +9,6 @@ def cost(index, a,b,c):
     ret1 = cost(index+1, a+l[index],b,c) + 10
     ret2 = cost(index+1, a,b+l[index],c) + 10
     ret3 = cost(index+1, a,b,c+l[index]) + 10
-    return min(ret0, ret1, ret2, ret3) + 10
+    return min(ret0, ret1, ret2, ret3)
 
 print(cost(0,0,0,0))
