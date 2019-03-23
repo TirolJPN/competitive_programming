@@ -33,10 +33,6 @@ class UnionFind:
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 
-    # 同じ根を持つ要素数を返す
-    def get_size(self, x):
-        return self.size[x]
-
 
 N,M,*t=map(int,open(0).read().split())
 # 壊していく橋の始点
@@ -50,36 +46,24 @@ out_ans = [0] * (M + 1)
 
 # 1 ~ Mについて到達不可能な2点の組み合わせの数(不便さ)を計算する
 # 解答より，M, M-1,...,1の順で計算する
-
 UF = UnionFind(N)
 
-# i番目に出力すべき不便さを求める
-# def ans(i, UF):
-#     global N,A,B,out_ans
-#     if UF.same_check(A[i+1], B[i+1]):
-#         return out_ans[i+1]
-#     else:
-#         n1 = UF.get_size(A[i+1])
-#         n2 = UF.get_size(B[i+1])
-#         UF.union(A[i+1], B[i+1])
-#         return out_ans[i+1] - (n1 * n2)
-
-
 # 全ての辺を削除した時の答えを格納
-sm=N*(N-1)//2
+sum=N*(N-1)//2
 
-out_ans[M] = sm
-
-group=[1]*(N+1)
+# 出力用のリスト
+out_ans[M] = sum
 
 for i in range(M, 0, -1):
     # out_ans[i] = (ans(i, UF))
     if not UF.same_check(A[i], B[i]):
-        grpa = UF.find(A[i])
-        grpb = UF.find(B[i])
+        root_a = UF.find(A[i])
+        root_b = UF.find(B[i])
         UF.union(A[i], B[i])
-        sm -= group[grpa] * group[grpb]
-        group[grpa] = group[grpb] = group[grpa] + group[grpb]
-    out_ans[i-1] = sm
+        sum -= UF.size[root_a] * UF.size[root_b]
+        tmp = UF.size[root_a] + UF.size[root_b]
+        UF.size[root_a] = tmp
+        UF.size[root_b] = tmp
+    out_ans[i-1] = sum
 
 [print(tmp) for tmp in out_ans[1:]]
