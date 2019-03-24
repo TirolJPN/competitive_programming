@@ -3,7 +3,6 @@ H = list(int(i) for i in input().split())
 
 # 再帰的にカウントしていく
 def count(h):
-    print(h)
     if len(h) != 0:
         output = 0
         min_elem = min(h)
@@ -18,7 +17,6 @@ def count(h):
                 output += count(tmp_h)
                 tmp_h = []
         output += count(tmp_h)
-        print(output)
         return output
     else:
         return 0
