@@ -1,22 +1,19 @@
-import itertools
-
 N, M= (int(i) for i in input().split())
-X = list(int(i) for i in input().split())
-X.sort()
-
-if(N >= M):
-    print(0)
+if (N<M):
+    X = list(int(i) for i in input().split())
+    X.sort()
+    Y = [X[i] - X[i-1] for i in range(1, len(X))]
+    Y.sort()
+    print(sum(Y[0:M-N]))
 else:
-    combination = list(itertools.combinations(range(M),N-1))
-    min = 2 * 100000
-    for tmp_taple in combination:
-        tmp_sum = 0
-        from_index = 0
-        for to_index in tmp_taple:
-            tmp_sum += X[to_index] - X[from_index]
-            from_index = to_index + 1
-        if(from_index < M-1):
-            tmp_sum += X[M-1] - X[from_index]
-        if(min > tmp_sum):
-            min = tmp_sum
-    print(min)
+    print(0)
+
+
+"""
+N個のコマ：N-1個の閉経路が存在する
+各座標の距離を求める(M-1個)
+M：座標の数　N:駒の数
+移動しなくても通っている座標の数: N
+M - N
+"""
+
