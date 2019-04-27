@@ -1,13 +1,10 @@
 n = int(input())
-s = str(input())
-k = int(input())
 
-c = s[k-1]
+v =  list(map(int, input().split()))
+c = list(map(int, input().split()))
 
-output = []
+num = 0
 for i in range(n):
-        if(s[i] == c):
-                output.append(c)
-        else:
-                output.append("*")
-print(''.join(output))
+        if(v[i] - c[i] > 0):
+                num += v[i] - c[i]
+print(num)

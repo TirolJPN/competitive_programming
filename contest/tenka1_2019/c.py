@@ -1,10 +1,24 @@
+import fractions 
+from functools import reduce
+import copy
+
+def gcd_list(numbers):
+    return reduce(fractions.gcd, numbers)
+
 n = int(input())
-s = list(input())
+a =  list(map(int, input().split()))
 
-count1 = s.count('.')
-count2 = s.count('#')
+a.sort()
+tmp_a = copy.deepcopy(a)
+tmp_a.pop(0)
+result = gcd_list(tmp_a)
 
-count3 = 2 * 10 ** 5 + 1
-for i in range(1,n):
-    count3 = min(count3, s[:i-1].count("#")+s[i:].count("."))
-print(min(count1, count2, count3))
+for i in range(1, n):
+    tmp_a = copy.deepcopy(a)
+    tmp_a.pop(i)
+    tmp = gcd_list(tmp_a)
+    if(result < tmp):
+        result = tmp
+        break
+
+print(result)
