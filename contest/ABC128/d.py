@@ -2,7 +2,7 @@ import math
 
 # 有理数型をインポート
 
-# 組合せの総数
+# 組合せの総数`
 def cmb(n, r):
     if n - r < r: r = n - r
     if r == 0: return 1
