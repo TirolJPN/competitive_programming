@@ -32,7 +32,7 @@ int main(void) {
   size_t Y_INDEX = distance(Y_M.begin(), iter);
   int Y_MIN = Y_M[Y_INDEX];
 
-  if ( X_MAX < Y_MIN && Y_MIN < Y ) { 
+  if ( X_MAX < Y_MIN && ( X < Y_MIN && Y_MIN <= Y ) ) { 
     printf("No War");
   } else {
     printf("War");
