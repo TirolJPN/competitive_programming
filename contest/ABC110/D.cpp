@@ -4,28 +4,27 @@
 #include <map>
 using namespace std;
 typedef long long ll;
-#define REP(i, n) for(int i=0; i<(n); ++i)
-#define FOR(i, a, b) for(int i=(a); i<(b); ++i)
-#define FORR(i, a, b) for(int i=(b)-1; i>=(a); --i)
-const ll MOD=1000000007ll;
-const int MAX = 51000000;
 
-ll fact[MAX], fact_inv[MAX];
+const int MAX = 210000;
+const int MOD = 1000000007;
 
-// 繰り返し二乗法
-ll power(ll a, ll b){
-	ll res=1;
-	while(b>0){
-		if(b&1) res=res*a%MOD;
-		a=a*a%MOD;
-		b>>=1;
-	}
-	return res;
+long long fac[MAX], finv[MAX], inv[MAX];
+void COMinit(){
+    fac[0] = fac[1] = 1;
+    finv[0] = finv[1] = 1;
+    inv[1] = 1;
+    for(int i = 2; i < MAX; i++){
+        fac[i] = fac[i-1] * i % MOD;
+        inv[i] = MOD - inv[MOD%i] * (MOD/i) % MOD;
+        finv[i] = finv[i-1] * inv[i] % MOD;
+    }
+}
+long long COM(int n, int k){
+    if(n < k) return 0;
+    if (n < 0 || k < 0) return 0;
+    return fac[n] * (finv[k] * finv[n-k] % MOD) % MOD;
 }
 
-ll comb(ll n, ll r){
-	return (fact[n]*fact_inv[r])%MOD*fact_inv[n-r]%MOD;
-}
 
 // ref : https://ei1333.github.io/luzhiled/snippets/math/prime-factor.html
 // 素因数分解をし、その出現回数をmapに格納する関数
@@ -47,21 +46,14 @@ int main(int) {
   map< ll, ll> map_exp;
   cin >> N >> M;
   map_exp = prime_factor(M);
-  int answer = 1;
+  long long answer = 1;
 
-  int n=100000;
-	// cin>>n;
-	fact[0]=1;
-        // 階乗の計算
-	REP(i, n) fact[i+1]=fact[i]*(i+1)%MOD;
-	fact_inv[n]=power(fact[n], MOD-2);
-        // 逆元の計算
-	FORR(i, 0, n) fact_inv[i]=fact_inv[i+1]*(i+1)%MOD;
+  COMinit();
   for (auto iter = map_exp.begin(); iter != map_exp.end(); iter ++) {
     int tmp_exp = iter->second;
-    int tmp_ans = comb(tmp_exp + N - 1, tmp_exp);
-    cout << iter->first << " : "  << iter->second << " : " << tmp_ans << "\n";
-    answer *= tmp_ans;
+    // cout << iter->first << " : " << iter->second << "\n";
+    long long tmp_ans = COM(tmp_exp + N - 1, N - 1);
+    answer = (answer * tmp_ans) % MOD;
   }
   cout << answer;
   return 0;
