@@ -1,21 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
- 
-int main() {
- 
+#include<iostream>
+
+using namespace::std;
+
+int main(int) {
   int N;
   cin >> N;
- 
-  int answer = 0;
-  int mx = 0;
- 
-  for (int i = 0; i < N; i++) {
+
+  int sum = 0, mx = 0;
+  for (int i=0; i<N; i++){
     int p;
     cin >> p;
-    answer += p;
+    sum += p;
     mx = max(mx, p);
   }
- 
-  cout << answer - (mx / 2) << endl;
- 
+  cout << sum - (mx / 2);
 }
