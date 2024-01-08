@@ -1,24 +1,24 @@
 N, M = (int(i) for i in input().split())
 
-KS = [list(map(int, input().split())) for _ in range(M)]
-K = [i[0] for i in KS]
-S = [i[1:] for i in KS]
+SC = [list(map(int, input().split())) for _ in range(M)]
 
-P = list(map(int, input().split()))
-# print(S)
-# print(P)
-result = 0
-for i in range(2 ** N):
-    # print(bin(i).count("1"))
-    t_flag = True
-    print('i:%d' % i)
-    for k in range(M):
-        if (bin(i).count("1") % 2 == P[k]):
-            continue
-        else:
-            print(bin(i).count("1"), P[k])
-            t_flag = False
-            break
-    if t_flag:
-        result += 1
-print(result)
+result = [0, 0, 0]
+cflag = True
+for sc in SC:
+    s = sc[0]
+    c = sc[1]
+    elm = c * 10**(3-s)
+    if result[s-1]==0:
+        result[s-1] = c
+    elif result[s-1] != c:
+        cflag = False
+if (cflag and result[3-N] != 0):
+    res = 0
+    if all([i == 0 for i in result]):
+        print(-1)
+    else:
+        for index, e in enumerate(result):
+            res += e * 10**(2-index)
+        print(res)
+else:
+    print(-1)
