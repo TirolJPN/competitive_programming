@@ -10,24 +10,4 @@
     "utility": "cpp",
     "ostream": "cpp",
   },
-  "deno.enable": true,
-  "deno.lint": true,
-  "editor.formatOnSave": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "deno.unstable": false,
-  "code-runner.executorMap": {
-    "javascript": "deno run --unstable",
-    "typescript": "deno run --unstable",
-    "javascriptreact": "deno run --unstable",
-    "typescriptreact": "deno run --unstable",
-  },
-  "code-runner.executorMapByGlob": {
-      "*{_,.}test.{js,ts,mjs,mts,jsx,tsx}": "deno test --unstable",
-      "test.{js,ts,mjs,mts,jsx,tsx}": "deno test --unstable",
-      "*{_,.}bench.{js,ts,mjs,mts,jsx,tsx}": "deno bench --unstable",
-      "bench.{js,ts,mjs,mts,jsx,tsx}": "deno bench --unstable",
-  },
-  "code-runner.runInTerminal": true,
 }
