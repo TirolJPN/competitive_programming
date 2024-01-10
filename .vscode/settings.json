@@ -9,6 +9,7 @@
     "map": "cpp",
     "utility": "cpp",
     "ostream": "cpp",
+    "deque": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
 }
